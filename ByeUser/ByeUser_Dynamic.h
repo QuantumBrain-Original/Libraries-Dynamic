@@ -2,13 +2,13 @@
 #include <iostream>
 #include <string>
 
-#ifdef MYLIB_DLL_EXPORT
-	#define MYLIB_DLL __declspec(dllexport)
+#ifdef BYEUSER_EXPORTS
+	#define BYEUSER_API __declspec(dllexport)
 #else
-	#define MYLIB_DLL __declspec(dllimport)
+	#define BYEUSER_API __declspec(dllimport)
 #endif
 
-class MYLIB_DLL Leaver
+class BYEUSER_API Leaver
 {
 	public:
 		void leave(std::string name);
